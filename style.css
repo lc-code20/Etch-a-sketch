@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+  }
+
+#container{
+    display: grid;
+    border: solid blue;
+    margin: 5%;
+}
+
+.grid{
+    display: grid;
+    border: solid blue;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
+    grid-gap: 0px;
+    margin: 10%;
+}
+
+.grid-item{
+    display: flex;
+    width: 1fr;
+    border: 1px solid rgb(199, 199, 199);
+}
+
+.grid-item:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
