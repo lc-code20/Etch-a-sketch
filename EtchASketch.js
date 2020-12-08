@@ -11,13 +11,17 @@ container.appendChild(reset);
 
 container.appendChild(grid);
 
+newSize= 16;
 
-
-createGrid(16);
+createGrid(newSize);
 
 function createGrid(s){
+    
+    grid.style.gridTemplateColumns = (`repeat(${s}, 1fr`);
+    grid.style.gridTemplateRows = (`repeat(${s}, 1fr`);
     for (i = 0; i<s*s; i++){
 
+        
         const squares = document.createElement('div');
         squares.classList.add('grid-item');
         squares.textContent = ' ';
@@ -46,13 +50,17 @@ function resetGrid(){
 }
 
 function promptNew(){
-    //var txt;
-    //newSize = prompt("Please input new size of square: ");
-    newSize = prompt("Please input new size of square: ");
-
-    while(newSize!=null && newSize>64){
+    const validinput = false;
+    
+    while(true){
         newSize = prompt("Please input new size of square: ");
+        //console.log(newSize);
+        if (newSize<64 && !isNaN(newSize)&& newSize!=""){
+            break;
+        }
     }
+
+    //newSize= newSize2;
 
     return newSize;
 }
