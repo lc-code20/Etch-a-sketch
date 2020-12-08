@@ -3,9 +3,22 @@
   }
 
 #container{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     border: solid blue;
     margin: 5%;
+}
+
+.left{
+    flex: 20%;
+    padding: 20px;
+    border: solid rgb(182, 3, 3);
+}
+
+.main{
+    flex: 80%;
+    padding: 20px;
+    border: solid yellow;
 }
 
 .grid{

@@ -1,15 +1,29 @@
+// main body
 const container = document.querySelector('#container');
 
+// smaller left column for buttons
+const leftCol = document.createElement('div');
+leftCol.classList.add('left');
+container.appendChild(leftCol);
+
+// main column for grid
+const mainC = document.createElement('div');
+mainC.classList.add('main');
+container.appendChild(mainC);
+
+//grid
 const grid = document.createElement('div');
 grid.classList.add('grid');
+mainC.appendChild(grid);
 
+// reset button
 const reset = document.createElement('input');
 reset.type = "button";
 reset.className = "btn btn-primary";
 reset.value = "Reset";
-container.appendChild(reset);
+leftCol.appendChild(reset);
 
-container.appendChild(grid);
+
 
 newSize= 16;
 
